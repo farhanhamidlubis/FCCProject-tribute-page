@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,700");
+@import url("https://fonts.googleapis.com/css?family=Oswald");
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150vh;
+    background-color: #ccc;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+    position: relative;
+}
+
+#tribute-info {
+    line-height: 1.5em
+}
+
+#main {
+    display: grid;
+    background-color: white;
+    font-family: "Josefin Sans", sans-serif;
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.1);
+    grid-template-columns: 5rem 2fr 3fr 5rem;
+    grid-template-rows: 1fr 2fr;
+    width: 90vw;
+    height: 120vh;
+}
+
+#main * {
+    transition: all 0.5s ease;
+}
+
+.landscape {
+    display: flex;
+    align-items: center;
+    grid-row: 1/2;
+    grid-column: 1/-1;
+    background-color: #141610;
+    background-image: url("https://images.unsplash.com/photo-1518317507427-5346735246ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 20%;
+    overflow: hidden;
+}
+
+#title {
+    display: inline-block;
+    font-size: 10vh;
+    font-weight: bold;
+    background: inherit;
+    background-image: url("https://images.unsplash.com/photo-1557683311-eac922347aa1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=715&q=80");
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-size: 160% auto;
+    background-position: calc(80% + ( -70% * var(--percentage))) 0;
+    color: transparent;
+}
+
+#img-div img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    outline: 10px solid #777;
+    outline-offset: -54px;
+    border: 44px solid transparent;
+    border-width: 15px 10px 85px 85px;
+}
+
+#img-caption {
+    text-align: center;
+}
+
+.left-side {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    font-family: "Oswald";
+    align-self: center;
+    justify-self: center;
+}
+
+.p50 {
+    padding: 50px;
+}
+
+.right-side {
+    color: #1d1d1d;
+    grid-row: 2/-1;
+    grid-column: 3/-1;
+    overflow: auto;
+}
